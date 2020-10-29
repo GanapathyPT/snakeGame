@@ -188,6 +188,9 @@ export default function SnakeGame() {
 						</button>
 						: null
 					}
+					<p className="mobile-guide">
+						click on the direction to change the direction of the snake
+					</p>
 				</div>
 			</div>
 			<div className="half-screen">
@@ -208,6 +211,28 @@ export default function SnakeGame() {
 					}
 				</div>
 			</div>
+			{
+				gameCompleted ?
+				null :
+				<div className="control-btns">
+					<button onClick={() => {
+						if (direction !== "RIGHT")
+							setDirection("LEFT")
+					}} className="control-btn btn-l" />
+					<button onClick={() => {
+						if (direction !== "DOWN")
+							setDirection("UP")}
+					} className="control-btn btn-u" />
+					<button onClick={() => {
+						if (direction !== "UP")
+							setDirection("DOWN")
+					}} className="control-btn btn-d" />
+					<button onClick={() => {
+						if (direction !== "LEFT")
+							setDirection("RIGHT")
+					}} className="control-btn btn-r" />
+				</div>
+			}
 		</div>
 	);
 }

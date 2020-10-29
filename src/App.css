@@ -53,3 +53,83 @@ body {
   right: 5px;
   cursor: pointer;
 }
+.control-btns {
+  display: none;
+}
+.control-btn {
+  position: fixed;
+  opacity: 0.2;
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+.mobile-guide {
+  display: none;
+  font-size: 12px;
+}
+.attribution {
+  font-size: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .full-screen {
+    flex-direction: column;
+  }
+  .half-screen {
+    width: 100%;
+    height: auto;
+  }
+  .board-item {
+    width: 16px;
+    height: 16px;
+  }
+  .control-btns {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+  .mobile-guide {
+    display: block;
+  }
+  .btn-l {
+    top: 25%;
+    bottom: 25%;
+    left: 0;
+    right: 50%;
+    width: 50%;
+  }
+  .btn-r {
+    top: 25%;
+    bottom: 25%;
+    right: 0;
+    left: 50%;
+    width: 50%;
+  }
+  .btn-u {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 75%;
+    height: 25vh;
+    width: 100vw;
+  }
+  .btn-d {
+    left: 0;
+    right: 0;
+    top: 75%;
+    bottom: 0;
+    height: 25vh;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .board-item {
+    height: 12px;
+    width: 12px;  
+  }
+}
